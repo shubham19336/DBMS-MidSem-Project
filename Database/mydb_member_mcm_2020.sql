@@ -1,0 +1,55 @@
+CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `mydb`;
+-- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: mydb
+-- ------------------------------------------------------
+-- Server version	8.0.22
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `member_mcm_2020`
+--
+
+DROP TABLE IF EXISTS `member_mcm_2020`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `member_mcm_2020` (
+  `Member_ID` int NOT NULL,
+  `Performance_Score` int NOT NULL,
+  PRIMARY KEY (`Member_ID`),
+  UNIQUE KEY `Member_ID_UNIQUE` (`Member_ID`),
+  CONSTRAINT `Participant_ID` FOREIGN KEY (`Member_ID`) REFERENCES `participant` (`Participant_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `member_mcm_2020`
+--
+
+LOCK TABLES `member_mcm_2020` WRITE;
+/*!40000 ALTER TABLE `member_mcm_2020` DISABLE KEYS */;
+INSERT INTO `member_mcm_2020` VALUES (4,5),(5,5),(6,4),(9,10),(10,9),(11,5),(18,8),(20,2),(21,10),(22,8),(24,4),(25,7),(26,1),(27,7),(28,10),(34,2),(35,1),(37,3),(38,5),(39,5),(44,0),(46,4),(47,10),(48,9),(50,1),(51,7),(52,1),(56,8),(57,5),(58,7),(59,0),(60,2),(62,6),(65,0),(67,5),(68,5),(73,0),(76,8),(78,4),(82,9),(87,6),(88,4),(89,9),(92,10),(97,7),(98,8),(99,5),(104,2),(106,8),(108,0),(112,9),(113,4),(117,10),(118,5),(120,1),(121,3),(122,9),(123,0),(125,2),(128,10),(129,7),(135,10),(136,7),(138,4),(142,4),(143,9),(146,3),(148,1),(151,8),(152,3),(153,6),(156,8),(157,10),(159,7),(161,1),(162,10),(163,4),(164,8),(165,0),(166,8),(167,1),(169,7),(171,5),(172,2),(173,5),(174,5),(175,7),(176,6),(179,7),(180,9),(181,5),(182,9),(184,9),(185,7),(186,7),(187,2),(189,6),(190,9),(191,0),(193,8),(194,10),(195,2),(196,7),(197,5),(199,7),(200,0),(203,2),(205,9),(210,7),(212,9),(213,9),(214,4),(215,9),(218,3),(220,4),(222,7),(223,6),(224,6),(226,2),(227,4),(228,2),(231,3),(234,6),(237,4),(239,2),(240,6),(242,7),(243,3),(246,5),(247,0),(248,6),(251,0),(252,2),(254,2),(255,2),(257,10),(259,7),(261,7),(262,6),(267,7),(268,1),(275,1),(276,8),(278,6),(282,0),(285,8),(288,7),(289,10),(292,8),(293,5);
+/*!40000 ALTER TABLE `member_mcm_2020` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-03-11 22:03:05
